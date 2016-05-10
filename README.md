@@ -12,7 +12,7 @@
 .When the player hit by the bugs, you lose, and the game will reset.
 .Try to reach the river without hitting the bugs.
 
-###live Version
+###Live Version
 
 http://xwpass.github.io/FEND-ArcadeGame/
 
