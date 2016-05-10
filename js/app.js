@@ -1,29 +1,34 @@
 // Enemies our player must avoid
-var Enemy = function() {
+var Enemy=function() {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
     this.setProperties(true);
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
+
 };
 // Update the enemy's position, required method for game
 //random generator
-function ranGen(low, high) {
+Enemy.prototype.ranGen=function(low, high) {
     return low + Math.floor(Math.random() * (high - low + 1));
-}
+}; 
+
+
+
 Enemy.prototype.setProperties = function(init) {
 
-    var speed = ranGen(1, 5) * 100;
+
+    var speed = this.ranGen(1, 5) * 100;
     if (init) {
-        this.x = ranGen(-404, 404);
+        this.x = this.ranGen(-404, 404);
         this.speed = speed;
     } else {
-        this.x = ranGen(-404, -101);
+        this.x = this.ranGen(-404, -101);
         this.speed = speed;
-    }
+    };
     // collision detection with enemy
-    this.row = ranGen(1, 3);
+    this.row = this.ranGen(1, 3);
     this.y = this.row * 83 - 12;
 };
 //update the enemy's position.
@@ -37,7 +42,7 @@ Enemy.prototype.update = function(dt) {
             this.setProperties(false)
         } else {
             this.x += this.speed * dt
-        }
+        };
         //Collision detection.
         if (this.row === game.player.row) {
             if (this.x > game.player.x - 73 && this.x < game.player.x + 73) {
@@ -76,7 +81,7 @@ Player.prototype.reset = function() {
     game.pause = false;
     this.rol = 2;
     this.row = 5;
-}
+};
 
 //score and reset the game.
 Player.prototype.goal = function() {
@@ -97,7 +102,7 @@ Player.prototype.handleInput = function(key) {
                 this.col != 4 ? this.col += 1 : this.col = 4;
                 break;
             case 'left':
-                this.col != 0 ? this.col -= 1 : this.col = 0;
+                this.col !== 0 ? this.col -= 1 : this.col = 0;
                 break;
             case 'up':
                 this.row != 1 ? this.row -= 1 : this.goal();
@@ -129,10 +134,10 @@ Game.prototype.handleInput = function(key) {
         //hit space tp pause or start the game.
         case 'space':
 
-            game.pause = !game.pause;
+            this.pause = !this.pause;
             //start the game.
-            if (game.first) {
-                game.first = false;
+            if (this.first) {
+                this.first = false;
             }
             break;
     }

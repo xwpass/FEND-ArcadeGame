@@ -7,6 +7,7 @@ frontend-nanodegree-arcade-game
 .Author: Wei Xu
 
 -Instruction:
+.Click on index.html or visit my Github page(https://github.com/xwpass/FEND-P3.git) to run this game.
 .Press "space bar" to start the game.
 .press "space bar" during the game to pause or unpause the game.
 .Use the up/daown/right/left key to move the player.
