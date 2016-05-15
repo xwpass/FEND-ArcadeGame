@@ -2,9 +2,7 @@
 ##Game info:
 * Version date: March 2016
 * Author: Wei Xu
-* 
-##Live Version
-http://xwpass.github.io/FEND-ArcadeGame/
+* Live Demo: http://xwpass.github.io/FEND-ArcadeGame/
 
 ###Instruction:
 
