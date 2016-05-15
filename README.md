@@ -2,6 +2,9 @@
 ##Game info:
 * Version date: March 2016
 * Author: Wei Xu
+* 
+##Live Version
+http://xwpass.github.io/FEND-ArcadeGame/
 
 ###Instruction:
 
@@ -11,10 +14,6 @@
 .When the player reach the river, you win, and the game will reset.
 .When the player hit by the bugs, you lose, and the game will reset.
 .Try to reach the river without hitting the bugs.
-
-###Live Version
-
-http://xwpass.github.io/FEND-ArcadeGame/
 
 ###Have fun, and happy coding!
 
